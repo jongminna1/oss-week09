@@ -58,6 +58,13 @@ function render() {
   rowsEl.replaceChildren(...state.days.map(dayRow));
 }
 
+for (const input of [rainInput, windInput]) {
+  input.addEventListener("input", () => {
+    state.limits = readLimits();
+    render();
+  });
+}
+
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const city = CITIES[citySelect.value];
