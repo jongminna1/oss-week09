@@ -19,7 +19,14 @@ export function toDays(daily) {
 }
 
 export function isGoodDay(day, limits) {
-  return day.rain <= limits.rain && day.wind <= limits.wind;
+  return reasons(day, limits).length === 0;
+}
+
+export function reasons(day, limits) {
+  const failed = [];
+  if (day.rain > limits.rain) failed.push("rain");
+  if (day.wind > limits.wind) failed.push("wind");
+  return failed;
 }
 
 export function summarize(days, limits) {
