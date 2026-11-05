@@ -84,3 +84,4 @@
 | E11 | `node check.js` 가 `Cannot find module '.../check.js'` | 다른 폴더에서 실행함 → `cd` 로 `oss-week09` 폴더에 들어가서 실행 |
 | E12 | `npx serve .` 가 `This port was picked because :3000 is in use` 와 함께 다른 주소로 뜸 | 3000 포트를 다른 프로그램(전에 켠 serve)이 쓰고 있음 → 그 터미널에서 `Ctrl+C` 하고 다시 켜거나, 새로 뜬 주소로 엶 |
 | E13 | 커밋했더니 편집기가 열림 | `-m` 없는 commit. VS Code 면 `Ctrl+S` 뒤 탭 닫기. Vim 이면 `Esc` → `:wq` Enter |
+# rog-legal
